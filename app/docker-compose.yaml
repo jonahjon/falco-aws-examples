@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  frontend:
+    image: 164382793440.dkr.ecr.us-west-2.amazonaws.com/redis-timestamp
+    ports:
+      - "5000:5000"
+    depends_on:
+      - backend
+
+  backend:
+    image: redis:alpine
